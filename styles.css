@@ -1,0 +1,72 @@
+
+    html, body{
+        background-color: #16b5bb;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        align-content: center;
+        background-image: url("imagenes_isla/fondo_isla.png");
+        background-repeat: repeat;
+        background-position: top left;
+        background-size: 50%;
+        background-attachment: fixed;
+
+
+    }
+
+    header {
+        background-color: #1a2457;
+        color: white;
+        padding: 15px 0;
+        font-family: Raleway;
+        width: 60%;
+        margin: 0 auto;
+        box-shadow: 6px 6px 15px;
+        border-radius: 15px;
+    }
+
+    footer{
+        background-color: #1a2457;
+        color: white;
+        padding: 15px 0;
+        font-family: Raleway;
+        width: 60%;
+        margin: 0 auto;
+        box-shadow: 6px 6px 15px;
+        margin-top: 2%;
+        border-radius: 15px;
+    }
+
+    .divCentral {
+        height: 60%;
+        width: 60%;
+        background-color: #1a2457;
+        margin: 0 auto;
+        box-shadow: 6px 6px 15px;
+        color: white;
+        margin-top: 2%;
+        position: relative;
+        z-index: 1;
+        border-radius: 15px;
+
+
+    }
+
+    #carouselExample{
+        max-width: 40%;
+        margin: 0 auto;
+        padding-top: 5%;
+    }
+
+    .carousel-item image{
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+
+    }
+
+
+
+
