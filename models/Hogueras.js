@@ -5,4 +5,4 @@ const hogueraSchema = new mongoose.Schema({
     ubicacion: { type: String, required: true },
     parejas: { type: Number, required: true }
 });
-module.exports = mongoose.model('Hoguera', hogueraSchema);
+module.exports = mongoose.model('Hoguera', hogueraSchema, 'Hogueras');

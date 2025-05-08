@@ -5,4 +5,4 @@ const participanteSchema = new mongoose.Schema({
     rol: { type: String, enum: ['tentador', 'pareja'], required: true },
     temporada: { type: Number, required: true }
 });
-module.exports = mongoose.model('Participante', participanteSchema);
+module.exports = mongoose.model('Participante', participanteSchema, 'Participantes');

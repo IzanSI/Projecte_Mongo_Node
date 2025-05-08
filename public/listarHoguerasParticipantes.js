@@ -9,38 +9,70 @@ window.onload = async () => {
 };
 
 function renderListas(hogueras, participantes) {
-  cont.innerHTML = `
-    <div class="row">
-      <div class="col-md-6">
+    cont.innerHTML = `
+    <div style="display: flex; justify-content: space-around; gap: 40px; flex-wrap: wrap; padding: 8%;">
+      
+      <div style="border: black 2px solid; padding: 30px; background-color: #e5cc9b; border-radius: 10px;">
         <h2>Hogueras</h2>
-        <ul class="list-group mb-4">
-          ${hogueras.map(h => `
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              ${h.nombre} - ${h.temporada} - ${h.ubicacion} - ${h.parejas} parejas
-              <span>
-                <a href="anadirHoguera.html?id=${h._id}" target="_blank" class="btn btn-warning btn-sm">✏️</a>
-                <button onclick="eliminar('/hogueras/${h._id}')" class="btn btn-danger btn-sm">🗑️</button>
-              </span>
-            </li>`).join('')}
-        </ul>
+        <table style="border-collapse: separate; border-spacing: 0 10px; width: 100%;">
+          <thead>
+            <tr style="background-color: #EC8750FF; color: saddlebrown;">
+              <th>Nombre</th>
+              <th>Temporada</th>
+              <th>Ubicación</th>
+              <th>Parejas</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${hogueras.map(h => `
+              <tr style="color: saddlebrown; border: 1px solid black;">
+                <td>${h.nombre}</td>
+                <td>${h.temporada}</td>
+                <td>${h.ubicacion}</td>
+                <td>${h.parejas}</td>
+                <td>
+                  <a href="anadirHoguera.html?id=${h._id}" target="_blank" class="btn btn-warning btn-sm">✏️</a>
+                  <button onclick="eliminar('/hogueras/${h._id}')" class="btn btn-danger btn-sm">🗑️</button>
+                </td>
+              </tr>`).join('')}
+          </tbody>
+        </table>
       </div>
 
-      <div class="col-md-6">
+      <div style="border: black 2px solid; padding: 30px; background-color: #e5cc9b; border-radius: 10px;">
         <h2>Participantes</h2>
-        <ul class="list-group mb-4">
-          ${participantes.map(p => `
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              ${p.nombre} - ${p.edad} años - ${p.rol} - T${p.temporada}
-              <span>
-                <a href="anadirParticipante.html?id=${p._id}" target="_blank" class="btn btn-warning btn-sm">✏️</a>
-                <button onclick="eliminar('/participantes/${p._id}')" class="btn btn-danger btn-sm">🗑️</button>
-              </span>
-            </li>`).join('')}
-        </ul>
+        <table style="border-collapse: separate; border-spacing: 0 10px; width: 100%;">
+          <thead>
+            <tr style="background-color: #ec8750; color: saddlebrown;">
+              <th>Nombre</th>
+              <th>Edad</th>
+              <th>Rol</th>
+              <th>Temporada</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${participantes.map(p => `
+              <tr style=" color: saddlebrown; border: 1px solid black;">
+                <td>${p.nombre}</td>
+                <td>${p.edad}</td>
+                <td>${p.rol}</td>
+                <td>${p.temporada}</td>
+                <td>
+                  <a href="anadirParticipante.html?id=${p._id}" target="_blank" class="btn btn-warning btn-sm">✏️</a>
+                  <button onclick="eliminar('/participantes/${p._id}')" class="btn btn-danger btn-sm">🗑️</button>
+                </td>
+              </tr>`).join('')}
+          </tbody>
+        </table>
       </div>
+
     </div>
   `;
 }
+
+
 
 async function eliminar(url) {
   if (confirm('¿Seguro que quieres eliminar este elemento?')) {
