@@ -55,9 +55,10 @@
     }
 
     #carouselExample{
-        max-width: 40%;
+        max-width: 30%;
         margin: 0 auto;
         padding-top: 5%;
+        padding-bottom: 3%;
     }
 
     .carousel-item image{
@@ -66,6 +67,28 @@
         border-radius: 10px;
 
     }
+
+    .divBotones{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 20px auto;
+        padding-top: 4%;
+
+    }
+
+    .boton{
+
+        background-color: #16b5bb;
+        border-radius: 10px;
+        margin: 2%;
+        color: white;
+
+    }
+
 
 
 
