@@ -40,16 +40,21 @@
     }
 
     .divCentral {
-        height: 60%;
         width: 60%;
         background-color: #1a2457;
-        margin: 0 auto;
-        box-shadow: 6px 6px 15px;
+        margin: 2% auto;
+        box-shadow: white 6px 6px 15px;
         color: saddlebrown;
-        margin-top: 2%;
         position: relative;
         z-index: 1;
         border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 0;
+        min-height: 300px;
+        box-sizing: border-box;
 
 
     }

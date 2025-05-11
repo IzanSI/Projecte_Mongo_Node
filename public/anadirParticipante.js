@@ -1,17 +1,26 @@
 const form = document.createElement('form');
 form.id = 'formParticipante';
+form.style.width = '70%';
+form.style.height='60%';
+form.style.padding = '2%';
+form.style.marginLeft = 'auto';
+form.style.marginRight = 'auto';
 form.innerHTML = `
-  <div class="mb-2"><input required name="nombre" class="form-control" placeholder="Nombre"></div>
-  <div class="mb-2"><input required name="edad" type="number" class="form-control" placeholder="Edad"></div>
-  <div class="mb-2">
-    <select required name="rol" class="form-select">
-      <option value="">Rol</option>
-      <option value="tentador">Tentador</option>
-      <option value="pareja">Pareja</option>
-    </select>
-  </div>
-  <div class="mb-2"><input required name="temporada" type="number" class="form-control" placeholder="Temporada"></div>
-  <button class="btn btn-primary">Guardar</button>
+
+<div style="margin-top: 40px; border: black 2px solid; padding-top: 5%; background-color: #84eee6">
+  <div class="mb-2"><input style="width: 30%; padding: 1%; margin: 2%" required name="nombre" class="form-control" placeholder="Nombre"></div>
+    <div class="mb-2"><input style="width: 30%; padding: 1%; margin: 2%" required name="edad" type="number" class="form-control" placeholder="Edad"></div>
+    <div class="mb-2">
+      <select style="width: 33%; padding: 1%; margin: 2%" required name="rol" class="form-select">
+        <option value="">Rol</option>
+        <option value="tentador">Tentador</option>
+        <option value="pareja">Pareja</option>
+      </select>
+    </div>
+    <div class="mb-2"><input style="width: 30%; padding: 1%; margin: 2%" required name="temporada" type="number" class="form-control" placeholder="Temporada"></div>
+    <button class="btn btn-primary" style="width: 12%; padding: 1.5%; background-color: antiquewhite; border-radius: 50%; margin: 5%">Guardar</button>
+</div>
+  
 `;
 document.querySelector('.divCentral').appendChild(form);
 

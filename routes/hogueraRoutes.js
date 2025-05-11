@@ -7,6 +7,11 @@ router.get('/', async (req, res) => {
     res.json(hogueras);
 });
 
+router.get('/:id', async (req, res) => {
+    const hoguera = await Hoguera.findById(req.params.id);
+    res.json(hoguera);
+});
+
 router.post('/', async (req, res) => {
     const nuevaHoguera = new Hoguera(req.body);
     await nuevaHoguera.save();

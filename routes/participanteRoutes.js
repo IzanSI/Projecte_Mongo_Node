@@ -7,6 +7,11 @@ router.get('/', async (req, res) => {
     res.json(participantes);
 });
 
+router.get('/:id', async (req, res) => {
+    const participante = await Participante.findById(req.params.id);
+    res.json(participante);
+});
+
 router.post('/', async (req, res) => {
     const nuevoParticipante = new Participante(req.body);
     await nuevoParticipante.save();
